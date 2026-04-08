@@ -1,4 +1,5 @@
 import designSystem from "./design-system/design-system.json";
+import { useState } from "react";
 
 const activities = [
   { icon: "🛒", title: "Amazon Purchase", date: "Oct 19, 2025", amount: "-$89.99", color: "loss", chip: "green" },
@@ -34,6 +35,7 @@ function ActivityRow({ item }) {
 
 export default function App() {
   const assets = designSystem.asset;
+  const [activeWallet, setActiveWallet] = useState("primary");
 
   return (
     <main className="app" style={{ fontFamily: designSystem.typography.fontFamily.base }}>
@@ -58,41 +60,53 @@ export default function App() {
       </section>
 
       <section className="tabs">
-        <button type="button" className="tab tab-active">Primary Card</button>
-        <button type="button" className="tab">Bitcoin Wallet</button>
-        <button type="button" className="tab">Ethereum Wallet</button>
+        <button type="button" className={`tab ${activeWallet === "primary" ? "tab-active" : ""}`} onClick={() => setActiveWallet("primary")}>Primary Card</button>
+        <button type="button" className={`tab ${activeWallet === "bitcoin" ? "tab-active" : ""}`} onClick={() => setActiveWallet("bitcoin")}>Bitcoin Wallet</button>
+        <button type="button" className={`tab ${activeWallet === "ethereum" ? "tab-active" : ""}`} onClick={() => setActiveWallet("ethereum")}>Ethereum Wallet</button>
+        <button type="button" className={`tab ${activeWallet === "savings" ? "tab-active" : ""}`} onClick={() => setActiveWallet("savings")}>Savings Card</button>
       </section>
 
-      <section className="bank-card">
+      <section className={`bank-card ${activeWallet === "bitcoin" ? "bank-card-bitcoin" : ""}`}>
         <span className="card-orb orb-top" />
         <span className="card-orb orb-bottom" />
         <div className="card-top">
           <div>
-            <p className="card-label">Balance</p>
-            <p className="card-balance">$12,453.87</p>
+            <p className="card-label">{activeWallet === "bitcoin" ? "BTC Balance" : "Balance"}</p>
+            <p className="card-balance">{activeWallet === "bitcoin" ? "0.4582 BTC" : "$12,453.87"}</p>
+            {activeWallet === "bitcoin" && <p className="card-sub-balance">≈ $19,244.40</p>}
           </div>
           <div className="card-right">
-            <span className="chip">Main</span>
-            <img src={assets.card} alt="" />
+            {activeWallet === "bitcoin" ? (
+              <img src={assets.wallet} alt="" />
+            ) : (
+              <>
+                <span className="chip">Main</span>
+                <img src={assets.card} alt="" />
+              </>
+            )}
           </div>
         </div>
-        <div className="card-bottom">
+        <div className={`card-bottom ${activeWallet === "bitcoin" ? "card-bottom-bitcoin" : ""}`}>
           <div>
-            <p className="card-number-label">Card Number</p>
-            <p className="card-number">•••• 4532</p>
+            <p className="card-number-label">{activeWallet === "bitcoin" ? "Wallet" : "Card Number"}</p>
+            <p className="card-number">{activeWallet === "bitcoin" ? "BTC" : "•••• 4532"}</p>
           </div>
-          <div className="master">
-            <span />
-            <span />
-          </div>
+          {activeWallet === "bitcoin" ? (
+            <img className="btc-mark" src={assets.btcMark} alt="" />
+          ) : (
+            <div className="master">
+              <span />
+              <span />
+            </div>
+          )}
         </div>
       </section>
 
       <div className="dots">
-        <span className="dot active" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
+        <span className={`dot ${activeWallet === "primary" ? "active" : ""}`} />
+        <span className={`dot ${activeWallet === "bitcoin" ? "active" : ""}`} />
+        <span className={`dot ${activeWallet === "ethereum" ? "active" : ""}`} />
+        <span className={`dot ${activeWallet === "savings" ? "active" : ""}`} />
       </div>
 
       <section className="actions">

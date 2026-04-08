@@ -11,7 +11,8 @@
       "black": "#000000",
       "100": "#f4f4f4",
       "200": "#c6c8ce",
-      "500": "#707784"
+      "500": "#707784",
+      "700": "#43474f"
     },
     "green": {
       "400": "#74df7b",
@@ -69,7 +70,8 @@
   },
   "effects": {
     "shadowCard": "0px 20px 25px -5px rgba(0,0,0,0.1), 0px 8px 10px -6px rgba(0,0,0,0.1)",
-    "gradientBankCard": "linear-gradient(148deg, #9ae600 0%, #00bc7d 100%)"
+    "gradientBankCard": "linear-gradient(148deg, #9ae600 0%, #00bc7d 100%)",
+    "gradientBitcoinCard": "linear-gradient(148deg, #ff8904 0%, #fe9a00 100%)"
   },
   "asset": {
     "bell": "https://www.figma.com/api/mcp/asset/5972be31-701f-4305-b174-88574a924af1",
@@ -77,6 +79,8 @@
     "card": "https://www.figma.com/api/mcp/asset/8c1f728c-5ad4-4c8e-9ac2-62929c75fe79",
     "send": "https://www.figma.com/api/mcp/asset/624c1e16-8bf2-4d3c-a632-715048760e36",
     "receive": "https://www.figma.com/api/mcp/asset/55ae0ec8-ec2a-43ff-836c-2bc437fa1ddd",
-    "trade": "https://www.figma.com/api/mcp/asset/a15f49e2-fd9b-4392-ae35-827f752c0d67"
+    "trade": "https://www.figma.com/api/mcp/asset/a15f49e2-fd9b-4392-ae35-827f752c0d67",
+    "wallet": "https://www.figma.com/api/mcp/asset/86860c7d-ab67-4a96-a492-884edc42b094",
+    "btcMark": "https://www.figma.com/api/mcp/asset/6806a274-a1de-43ed-b94c-7a1699877af7"
   }
 }

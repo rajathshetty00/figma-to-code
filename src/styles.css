@@ -4,6 +4,7 @@
   --neutral-100: #f4f4f4;
   --neutral-200: #c6c8ce;
   --neutral-500: #707784;
+  --neutral-700: #43474f;
   --green-400: #74df7b;
   --green-500: #7fe251;
   --green-700: #308136;
@@ -101,7 +102,7 @@ h2 {
   border-radius: var(--radius-pill);
   padding: 10px 18px;
   background: var(--neutral-100);
-  color: var(--neutral-500);
+  color: var(--neutral-700);
   font-size: 16px;
   line-height: 24px;
   white-space: nowrap;
@@ -122,6 +123,10 @@ h2 {
   padding: 28px;
   position: relative;
   overflow: hidden;
+}
+
+.bank-card-bitcoin {
+  background: linear-gradient(148deg, #ff8904 0%, #fe9a00 100%);
 }
 
 .card-orb {
@@ -157,6 +162,10 @@ h2 {
   align-items: flex-end;
 }
 
+.card-bottom-bitcoin {
+  margin-top: 6px;
+}
+
 .card-label {
   margin: 0;
   color: var(--neutral-white);
@@ -171,6 +180,14 @@ h2 {
   font-size: 48px;
   line-height: 40px;
   font-weight: 500;
+}
+
+.card-sub-balance {
+  margin: 8px 0 0;
+  color: var(--neutral-white);
+  opacity: 0.75;
+  font-size: 36px;
+  line-height: 24px;
 }
 
 .card-right {
@@ -205,6 +222,11 @@ h2 {
   color: var(--neutral-white);
   font-size: 32px;
   line-height: 28px;
+}
+
+.btc-mark {
+  width: 29px;
+  height: 56px;
 }
 
 .master {
