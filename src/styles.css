@@ -129,6 +129,14 @@ h2 {
   background: linear-gradient(148deg, #ff8904 0%, #fe9a00 100%);
 }
 
+.bank-card-ethereum {
+  background: linear-gradient(148deg, #7c3aed 0%, #4f46e5 100%);
+}
+
+.bank-card-savings {
+  background: linear-gradient(148deg, #0f766e 0%, #0ea5a4 100%);
+}
+
 .card-orb {
   position: absolute;
   border-radius: var(--radius-full);
@@ -162,7 +170,7 @@ h2 {
   align-items: flex-end;
 }
 
-.card-bottom-bitcoin {
+.card-bottom-compact {
   margin-top: 6px;
 }
 
@@ -186,7 +194,7 @@ h2 {
   margin: 8px 0 0;
   color: var(--neutral-white);
   opacity: 0.75;
-  font-size: 36px;
+  font-size: 16px;
   line-height: 24px;
 }
 
@@ -227,6 +235,39 @@ h2 {
 .btc-mark {
   width: 29px;
   height: 56px;
+}
+
+.variant-logo {
+  display: grid;
+  place-items: center;
+  color: var(--neutral-white);
+}
+
+.variant-logo.sm {
+  width: 24px;
+  height: 24px;
+}
+
+.variant-logo.lg {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.variant-logo svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.variant-logo.lg svg {
+  width: 28px;
+  height: 28px;
 }
 
 .master {
