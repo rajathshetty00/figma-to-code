@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "source": "figma",
+    "fileKey": "zBforwvw1iULHQbGrxIxKM",
+    "nodeId": "0:33",
+    "name": "EZ-Banko Home Screen"
+  },
+  "color": {
+    "neutral": {
+      "white": "#ffffff",
+      "black": "#000000",
+      "100": "#f4f4f4",
+      "200": "#c6c8ce",
+      "500": "#707784"
+    },
+    "green": {
+      "400": "#74df7b",
+      "500": "#7fe251",
+      "700": "#308136"
+    },
+    "orange": {
+      "500": "#f78635"
+    },
+    "red": {
+      "400": "#db5259"
+    },
+    "surface": {
+      "app": "#f9fafb"
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "base": "Inter, sans-serif"
+    },
+    "fontWeight": {
+      "regular": 400,
+      "medium": 500
+    },
+    "fontSize": {
+      "12": 12,
+      "14": 14,
+      "16": 16,
+      "20": 20,
+      "28": 28,
+      "36": 36,
+      "48": 48
+    },
+    "lineHeight": {
+      "20": 20,
+      "24": 24,
+      "28": 28,
+      "36": 36,
+      "40": 40,
+      "48": 48
+    }
+  },
+  "spacing": {
+    "sp12": 12,
+    "sp16": 16,
+    "sp24": 24,
+    "sp36": 36,
+    "sp40": 40,
+    "sp64": 64
+  },
+  "radius": {
+    "16": 16,
+    "80": 80,
+    "full": 9999
+  },
+  "effects": {
+    "shadowCard": "0px 20px 25px -5px rgba(0,0,0,0.1), 0px 8px 10px -6px rgba(0,0,0,0.1)",
+    "gradientBankCard": "linear-gradient(148deg, #9ae600 0%, #00bc7d 100%)"
+  },
+  "asset": {
+    "bell": "https://www.figma.com/api/mcp/asset/5972be31-701f-4305-b174-88574a924af1",
+    "settings": "https://www.figma.com/api/mcp/asset/da8bfd52-b819-4237-bbc6-ca7ad22507e3",
+    "card": "https://www.figma.com/api/mcp/asset/8c1f728c-5ad4-4c8e-9ac2-62929c75fe79",
+    "send": "https://www.figma.com/api/mcp/asset/624c1e16-8bf2-4d3c-a632-715048760e36",
+    "receive": "https://www.figma.com/api/mcp/asset/55ae0ec8-ec2a-43ff-836c-2bc437fa1ddd",
+    "trade": "https://www.figma.com/api/mcp/asset/a15f49e2-fd9b-4392-ae35-827f752c0d67"
+  }
+}
